@@ -23,11 +23,10 @@ text=text.text
 pjson=json.loads(text)
 getp=pjson['body']['thumbnails']['illust']
 leng=len(getp)
-for j in range(200):
+for j in range(100):
 	for i in range(leng):
 		url=getp[i]['urls']['540x540']
 		f=open('urls.txt','a+')
 		f.write(url)
 		f.write('\n')
 		f.close()
-	time.sleep(5)
